@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd ">
+
+
+<!-- we use this for turn on the annotation -->
+<context:annotation-config /> 
+
+<!-- <bean id="person" class="com.training.spring.Person" scope="prototype" autowire="byName"> -->
+<bean id="person" class="com.training.spring.Person" scope="prototype">
+<!--  Setter Injection -->
+<property name="firstName" value="Shailesh" />
+<property name="lastName" value="Mishra" />
+
+<!-- Constructor Injection-->
+<constructor-arg value="22" type="int" />
+<!-- <property name="car" ref="car" />  -->
+
+</bean>
+<!-- for by byName id will be same and for byType id doesn't matter -->
+<!-- <bean id="car123" class="com.training.spring.Car" scope="prototype"> -->
+<bean id="car123" class="com.training.spring.Car" scope="prototype">
+
+<property name="make" value="Honda" />
+<property name="model" value="Civic" />
+<property name="year" value="2015" />
+</bean>
+
+<bean id="employee" class="com.training.spring.Employee" scope="prototype">
+
+<property name="empId" value="101" />
+<property name="empName" value="Tom" />
+<property name="desigNation" value="Developer" />
+<property name="salary" value="50000" />
+</bean>
+
+<bean id="manager" class="com.training.spring.Manager" scope="prototype">
+
+<property name="name" value="John" />
+<property name="salary" value="70000" />
+
+</bean>
+
+</beans>  
